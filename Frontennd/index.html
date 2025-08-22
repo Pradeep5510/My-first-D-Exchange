@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My First Decentralised Exchange</title>
+</head>
+<body>
+    <h1>Welcome to PBRO DEx-Scanner</h1>
+    <div class="main">   
+    <div class="intro">
+        <p>This DEX scanner helps you understand how a liquidity pool works.
+           In this pool, there are two tokens :— 
+           <ol>
+            <li>Ethereum (ETH)</li>
+            <li>USDC (a stablecoin pegged to the US dollar)</li>
+           </ol>
+           A liquidity pool is 
+           essentially a smart contract that holds a reserve of both tokens. 
+           Traders can swap ETH for USDC (or vice versa) directly from the pool,
+           without needing a centralized exchange. The prices of the tokens are 
+           determined by a simple mathematical formula :- <br>
+           (commonly the x*y = k constant product formula).
+         <ul>
+            <li>If ETH is swapped to USDC, Price of ETH decreases .</li>
+            <li>If USDC is swapped to ETH, Price of ETH increases.</li>
+         </ul>
+        </p> 
+    </div>
+
+    <div class="swapbox">
+        <h2>Swap Tokens</h2>
+        <br><br>
+        <label for="token1"></label> 
+        <select id="token1">
+           <option value="eth">Ethereum (ETH)</option>
+           <option value="usdc">USD Coin (USDC)</option>
+           </select>
+           <br>
+        <label for="token2"></label>
+       <select id="token2">
+           <option value="eth">Ethereum (ETH)</option>
+           <option value="usdc">USD Coin (USDC)</option> 
+       </select>
+       <br><br>
+        <label for="amount"></label>
+        <input type="number" id="amount" placeholder="Quantity (Eth Only)">
+        <br><br>
+
+        <button id="swapButton" onclick="swap()">Swap</button>        
+        <div id="result"></div>
+
+
+    </div>
+    </div>
+    <footer></footer>
+    
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
